@@ -1,0 +1,54 @@
+.sin-guion a {
+    text-decoration:none;
+}
+
+.bg-navbar {
+    background-color: #ffffff;
+}
+
+/* .logo{
+    color: #dc3545;
+} */
+
+.banner {
+position: absolute;
+height: 202px;
+width: 100%;
+left: 0px;
+top: 76px;
+background: #686868;
+}
+
+.titulo{
+font-family: Rubik;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 36px;
+color: #FFFFFF; 
+
+position: relative;
+width: 1092px;
+height: 46px;
+left: 96px;
+top: 84px;
+}
+
+.sin-borde {
+    border-left: none;
+    border-top-right-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+    background-color: #F5F5F5 !important;
+}
+
+.borde-redondeado{
+    border-top-left-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+    border-right: none !important;
+    background-color: #F5F5F5 !important;
+}
+
+.buscador {
+position: relative;
+top: 128px;
+}
