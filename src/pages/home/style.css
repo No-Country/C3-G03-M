@@ -39,6 +39,7 @@ top: 84px;
     border-top-right-radius: 0.5rem !important;
     border-bottom-right-radius: 0.5rem !important;
     background-color: #F5F5F5 !important;
+
 }
 
 .borde-redondeado{
@@ -51,4 +52,20 @@ top: 84px;
 .buscador {
 position: relative;
 top: 128px;
+}
+
+.show > .nav-link,
+.nav-link.active {
+color: #FFFFFF;
+}
+
+.cont-nav {
+    z-index: 1000;
+    background-color: #FFFFFF;
+}
+
+.cont-link {
+    border: 1px solid #686868;
+    color: rgba(0,0,0,.55);
+    border-color: rgba(0,0,0,.1);
 }
