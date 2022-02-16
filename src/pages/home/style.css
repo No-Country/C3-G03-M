@@ -22,15 +22,12 @@ background: #686868;
 .titulo{
 font-family: Rubik;
 font-style: normal;
-font-weight: normal;
 font-size: 30px;
 line-height: 36px;
 color: #FFFFFF; 
-
-position: relative;
-width: 1092px;
+position: absolute;
 height: 46px;
-left: 96px;
+left: 7%;
 top: 84px;
 }
 
@@ -51,7 +48,11 @@ top: 84px;
 
 .buscador {
 position: relative;
-top: 128px;
+top: 181px;
+left: auto;
+right: auto;
+
+
 }
 
 .show > .nav-link,
@@ -64,8 +65,19 @@ color: #FFFFFF;
     background-color: #FFFFFF;
 }
 
-.cont-link {
+/* .cont-link {
     border: 1px solid #686868;
     color: rgba(0,0,0,.55);
     border-color: rgba(0,0,0,.1);
+} */
+
+
+.navbar>.container{
+    justify-content: flex-start;
 }
+
+/* @media only screen and (max-width: 991px) {
+.cont-nav {
+    z-index: none;
+}
+} */
