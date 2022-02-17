@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
+import json
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,6 +43,17 @@ INSTALLED_APPS = [
     'backapp'
 ]
 
+SIMPLE_JWT = { # Alguna configuracion para los tokens a usar para autorizacion
+    'ACCESS_TOKEN_LIFETIME'     : timedelta(minutes = 10),
+    'REFRESH_TOKEN_LIFETIME'    : timedelta(days = 1),
+    'ROTATE_REFRESH_TOKENS'     : False,  # Si se debe devolver un nuevo Refresh Token al hacer uso de un Refresh Token
+    'BLACKLIST_AFTER_ROTATION'  : False,  # Si un Refresh Token utilizado debe mandarse a la lista negra (necesita de app de lista negra instalada)
+    'UPDATE_LAST_LOGIN'         : True,   # Actualizar campo de Last time logged in de la tabla User
+    'ALGORITHM'                 : 'HS256',
+    'USER_ID_FIELD'             : 'id', # Campo de la tabla User a usar como identificador
+    'USER_ID_CLAIM'             : 'user_id', # Forma de referirse a este identificador unico en la metadata del token
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -50,6 +63,17 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = { # En settings.py del proyecto
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAdminUser'
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication', # Usaremos Tokens de JWT
+    )
+}
 
 ROOT_URLCONF = 'backproject.urls'
 
@@ -75,10 +99,18 @@ WSGI_APPLICATION = 'backproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+with open('utils/db_credentials.json', 'r') as archivo:
+     db_credentials = json.load(archivo)
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    
+  'default': {
+        'ENGINE'   : 'django.db.backends.postgresql_psycopg2',
+        'NAME'     : db_credentials["db_name"],
+        'USER'     : db_credentials["db_user"],
+        'PASSWORD' : db_credentials["db_pass"],
+        'HOST'     : db_credentials["db_ip"],
+        'PORT'     : db_credentials["db_port"]
     }
 }
 
