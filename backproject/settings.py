@@ -75,6 +75,8 @@ REST_FRAMEWORK = { # En settings.py del proyecto
     )
 }
 
+AUTH_USER_MODEL = 'backapp.User'
+
 ROOT_URLCONF = 'backproject.urls'
 
 TEMPLATES = [
