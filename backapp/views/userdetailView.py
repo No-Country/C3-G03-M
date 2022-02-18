@@ -10,7 +10,7 @@ from backapp.serializers.userSerializer import UserSerializer
 class UserDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = (IsAuthenticated)
+    permission_classes = (IsAuthenticated,)
     
     def get(self ,request, *args , **kwargs):
         token = request.Meta.get('HTTP_AUTHORIZATION')[7:]
@@ -20,4 +20,6 @@ class UserDetailView(generics.RetrieveAPIView):
         if valid_data ['user_id'] != ['pk']:
             stringResponse = {'detail' : 'Unauthorized Request'}
             return Response(stringResponse , status = status.HTTP_401_UNAUTHORIZED)
-        return super().get(request , *args , **kwargs)    
+        return super().get(request , *args , **kwargs)
+
+ 
