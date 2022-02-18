@@ -6,11 +6,12 @@ from rest_framework.permissions import IsAuthenticated
 from backapp.models.user import User
 from backapp.serializers.userSerializer import UserSerializer
 
+
 class UserDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = (IsAuthenticated,)
-
+    permission_classes = (IsAuthenticated)
+    
     def get(self ,request, *args , **kwargs):
         token = request.Meta.get('HTTP_AUTHORIZATION')[7:]
         tokenBackend = TokenBackend(algorithm = settings.SIMPLE_JWT['ALGORITHM'])

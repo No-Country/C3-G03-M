@@ -64,15 +64,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-REST_FRAMEWORK = { # En settings.py del proyecto
+REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
-        'rest_framework.permissions.IsAuthenticated',
-        'rest_framework.permissions.IsAdminUser'
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication', # Usaremos Tokens de JWT
-    )
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_SCHEMA_CLASS': ('drf_spectacular.openapi.AutoSchema'
+    ),
 }
 
 AUTH_USER_MODEL = 'backapp.User'

@@ -8,14 +8,14 @@ class UserManager(BaseUserManager):
             raise ValueError ('los usuarios deben tener un nombre de usuario')
         user = self.model(username = username)
         user.set_password(password)    
-        user.save(using = self.db)
+        user.save(using = self._db)
         return user 
 
     def create_superuser(self , username , password):
         user = self.create_user(username = username,
-        password = password,)
+        password = password)
         user.is_admin = True
-        user.save(using = self.db)    
+        user.save(using = self._db)    
         return user 
 
 class User (AbstractBaseUser, PermissionsMixin):
@@ -27,7 +27,7 @@ class User (AbstractBaseUser, PermissionsMixin):
     is_admin = models.BooleanField(verbose_name = "Es Administrador", default = False)
 
     def save(self, **kwargs):
-        some_salt = 'parangaricutirimicuaro'
+        some_salt = 'mMUj0DrIK6vgtdIYepkIxN'
         self.password = make_password(self.password,some_salt)
         super().save(**kwargs)
     
