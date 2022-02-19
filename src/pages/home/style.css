@@ -85,6 +85,7 @@ color: #FFFFFF;
     text-align: center;
 }
 
+
 .btn-img {
     position: absolute;
 
@@ -97,8 +98,8 @@ color: #FFFFFF;
 #footer{
     background-color: #424242;
     width: 100%;
-    height: 180px;
-    position:fixed;
+    height: 140px;
+    position: unset;
     bottom: 0px;
  
   
@@ -140,6 +141,32 @@ color: #FFFFFF;
 #contenido {
     padding-bottom: 200px;
 }
+
+#btnFavorito {
+    border-radius: 2.5rem;
+    border: 0;
+    opacity: 1.2;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-anchor: none;
+    padding: 10px;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.582);
+    cursor: pointer;
+    width: 40px;
+    left: 45%;
+ 
+}
+
+#contenedorFavorito {
+    left: 45%;
+}
+
+#cardImg1 , #cardImg2, #cardImg3, #cardImg4, #cardImg5 {
+    border: none;
+}
+
+
 
 /* .img-centrada{
   
