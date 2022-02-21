@@ -173,6 +173,10 @@ color: #FFFFFF;
     border: none;
 }
 
+#cardImg4, #cardImg5 {
+    width: 550px;
+    height: 350px;
+}
 
 
 /* .img-centrada{
