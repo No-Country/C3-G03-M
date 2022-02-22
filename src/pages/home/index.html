@@ -19,7 +19,9 @@
   <!-- ###### Navbar start #####-->
   <nav class="navbar navbar-expand-lg navbar-light bg-navbar">
     <div class="container-fluid cont-nav">
-      <a class="navbar-brand mx-4" href="#">LOGO</a>
+      <div id="logo">
+        <a class="navbar-brand mx-4" href="#">LOGO</a>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" color="#686868"></span>
@@ -87,48 +89,55 @@
         </div>
         <!-- ###### Iconos end #####-->
 
-        <ul class="navbar-nav d-flex">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <button class="btn btn-outline-danger btn-sm my-3" type="submit">Login</button>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <button class="btn btn-outline-danger btn-sm my-3" type="submit">SingUp</button>
-            </a>
-          </li>
-
-        </ul>
+        <!-- ###### Btn navbar start #####-->
+        <div id="btn-navbar">
+          <ul class="navbar-nav d-flex">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <button class="btn btn-outline-danger btn-sm my-3" type="submit">Login</button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <button class="btn btn-outline-danger btn-sm my-3" type="submit">SingUp</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+       <!-- ###### Btn navbar start #####-->
       </div>
     </div>
   </nav>
   <!-- ###### Navbar end #####-->
-
-  <!-- ###### Banner uno start #####-->
-  <div class="container-fluid banner ">
-    <div class="row">
-      <div class="col">
-        <h1 class="titulo">Encuentra tu <strong>estilo</strong></h1>
-
+<section>
+  
+    <!-- ###### Banner uno start #####-->
+    <div class="container-fluid banner ">
+      <div class="row">
+        <div class="col">
+          <h1 class="titulo">Encuentra tu <strong>estilo</strong></h1>
+  
+        </div>
+      </div>
+  
+      <div class="input-group container buscador">
+        <input type="text" class="form-control borde-redondeado" placeholder="Busqueda" aria-label="Username"
+          aria-describedby="basic-addon1">
+        <span class="input-group-text sin-borde" id="basic-addon1">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="#686868"
+              class="bi bi-search" viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+          </a>
+        </span>
       </div>
     </div>
+    <!-- ###### Banner uno end #####-->
 
-    <div class="input-group container buscador">
-      <input type="text" class="form-control borde-redondeado" placeholder="Busqueda" aria-label="Username"
-        aria-describedby="basic-addon1">
-      <span class="input-group-text sin-borde" id="basic-addon1">
-        <a href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="#686868"
-            class="bi bi-search" viewBox="0 0 16 16">
-            <path
-              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-          </svg>
-        </a>
-      </span>
-    </div>
-  </div>
-  <!-- ###### Banner uno end #####-->
+</section>
+
 
 
   <!-- ###### Contenedor principal start #####-->
@@ -143,17 +152,17 @@
 
     <!-- ###### Productos oferta start #####-->
     <div class="row my-3" id="imgProducto">
-      <!-- ###### card 1 start #####-->
-      <div class="col-lg-4 col-md-4 col-sm-4 card rounded" id="cardImg1">
-        <img class="img-fluid imagenes-formato img-centrada card-img" id="img-1">
+   
         <!----------------------------- scroll doble----------------------------- -->
         <section class="sc container-fluid">
           <div class="scroll rounded-3">
             <div class="row my-3" id="imgProducto">
-              <div class="card item">
-                <img class="img-fluid imagenes-formato img-centrada" id="img-1"
+
+              <!-- ###### card 1 start #####-->
+              <div class="col-lg-4 col-md-4 col-sm-4 card rounded item zoom" id="cardImg1">
+                <img class="img-fluid imagenes-formato img-centrada card-img" id="img-1"
                   src="https://source.unsplash.com/random/350x250?sig=2" alt="">
-                <div class="card-img-overlay mx-2 text-start" id="contenedorFavorito">
+                <div class="card-img-overlay text-start mx-2" id="contenedorFavorito">
                   <button class="btn-img btn card-title" id="btnFavorito">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" color="#FF3838"
                       class="bi bi-heart" viewBox="0 0 16 16">
@@ -166,7 +175,7 @@
               <!-- ###### card 1 end #####-->
 
               <!-- ###### card 2 start #####-->
-              <div class="col-lg-4 col-md-4 col-sm-4 card rounded" id="cardImg2">
+              <div class="col-lg-4 col-md-4 col-sm-4 card rounded item zoom" id="cardImg2">
                 <img class="img-fluid imagenes-formato img-centrada card-img" id="img-2"
                   src="https://source.unsplash.com/random/350x250?sig=3" alt="">
                 <div class="card-img-overlay text-start mx-2" id="contenedorFavorito">
@@ -182,7 +191,7 @@
               <!-- ###### card 2 end #####-->
 
               <!-- ###### card 3 start #####-->
-              <div class="col-lg-4 col-md-4 col-sm-4 card rounded" id="cardImg3">
+              <div class="col-lg-4 col-md-4 col-sm-4 card rounded item zoom" id="cardImg3">
                 <img class="img-fluid imagenes-formato img-centrada card-img" id="img-3"
                   src="https://source.unsplash.com/random/350x250?sig=4" alt="">
                 <div class="card-img-overlay text-start mx-2" id="contenedorFavorito">
@@ -195,38 +204,70 @@
                   </button>
                 </div>
               </div>
-
+              <!-- ###### card 3 end #####-->
             </div>
-
             <!-- ###### Productos oferta end #####-->
           </div>
             <!-- ###### Tercer titulo start #####-->
-      <!-- segundo sroll -->
-          <div class="scroll rounded-3">
+
+
+      <!--------------------- segundo sroll --------------------------->
+          <div class="scroll rounded-3" id="scroll-2">
             <div class="row my-3" class="item" id="imgProducto">
-              <div class="item">
-                <img class="img-fluid imagenes-formato img-centrada" id="img-1"
+
+              <!-- ###### card 1 start #####-->
+              <div class="col-lg-4 col-md-4 col-sm-4 card rounded item zoom" id="cardImg1">
+                <img class="img-fluid imagenes-formato img-centrada card-img" id="img-1"
                   src="https://source.unsplash.com/random/350x250?sig=2" alt="">
-                <!-- <button class="btn-img">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" color="#FFFFFF"
-            class="bi bi-heart" viewBox="0 0 16 16">
-            <path
-              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-        </svg>
-        </button> -->
+                <div class="card-img-overlay text-start mx-2" id="contenedorFavorito">
+                  <button class="btn-img btn card-title" id="btnFavorito">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" color="#FF3838"
+                      class="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div class="item">
-                <img class="img-fluid imagenes-formato img-centrada" id="img-2"
+              <!-- ###### card 1 end #####-->
+
+              <!-- ###### card 2 start #####-->
+              <div class="col-lg-4 col-md-4 col-sm-4 card rounded item zoom" id="cardImg2">
+                <img class="img-fluid imagenes-formato img-centrada card-img" id="img-2"
                   src="https://source.unsplash.com/random/350x250?sig=3" alt="">
+                <div class="card-img-overlay text-start mx-2" id="contenedorFavorito">
+                  <button class="btn-img btn card-title" id="btnFavorito">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" color="#FF3838"
+                      class="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div class="item" id="img-3">
-                <img class="img-fluid imagenes-formato img-centrada"
+              <!-- ###### card 2 end #####-->
+
+              <!-- ###### card 3 start #####-->
+              <div class="col-lg-4 col-md-4 col-sm-4 card rounded item zoom" id="cardImg3">
+                <img class="img-fluid imagenes-formato img-centrada card-img" id="img-3"
                   src="https://source.unsplash.com/random/350x250?sig=4" alt="">
+                <div class="card-img-overlay text-start mx-2" id="contenedorFavorito">
+                  <button class="btn-img btn card-title " id="btnFavorito">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" color="#FF3838"
+                      class="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                    </svg>
+                  </button>
+                </div>
               </div>
+              <!-- ###### card 3 end #####-->
             </div>
           </div>
         </section>
         <!--------------------------------------termina el scroll doble----------------------------------->
+      <section>
+      <!-- ###### Tercer titulo start #####-->
         <div class="row text-md-start mx-2" id="tituloTercero">
           <div class="col my-2">
             <h4>Nueva temporada</h4>
@@ -253,7 +294,7 @@
         <!-- ###### Productos disponibles start #####-->
         <div class="row" id="imgProductoDos">
           <!-- ###### Productos uno start #####-->
-          <div class="col-lg-4 col-md-4 col-sm-4 card rounded" id="cardImg4">
+          <div class="col-lg-4 col-md-4 col-sm-4 card rounded my-4" id="cardImg4">
             <img class="img-fluid imagenes-formato img-centrada card-img" id="img-4"
               src="https://source.unsplash.com/random/550x350?sig=6" alt="">
             <div class="card-img-overlay text-start mx-2" id="contenedorFavorito">
@@ -266,17 +307,11 @@
               </button>
             </div>
           </div>
-
-
-
-          <!-- 
-      <div class="col-lg-6 col-md-6 col-sm-auto">
-        <img class="img-fluid imagenes-formato " src="https://source.unsplash.com/random/550x200?sig=6" alt="">
-      </div> -->
+     
           <!-- ###### Productos uno end #####-->
 
           <!-- ###### Productos dos start #####-->
-          <div class="col-lg-4 col-md-4 col-sm-4 card rounded" id="cardImg5">
+          <div class="col-lg-4 col-md-4 col-sm-4 card rounded my-4" id="cardImg5">
             <img class="img-fluid imagenes-formato img-centrada card-img" id="img-5"
               src="https://source.unsplash.com/random/550x350?sig=7" alt="">
             <div class="card-img-overlay text-start mx-2" id="contenedorFavorito">
@@ -289,15 +324,16 @@
               </button>
             </div>
           </div>
-
-
         </div>
-
         <!-- ###### Productos dos end #####-->
+
       </div>
+      </section>
       <!-- ###### Productos disponibles end #####-->
+
     </div>
     <!-- ###### Contenedor principal end #####-->
+
 </div>
 
     <!-- ###### Footer start #####-->
