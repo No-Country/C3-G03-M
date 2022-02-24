@@ -1,3 +1,4 @@
+/* Estilos Navbar start */
 .sin-guion a {
     text-decoration:none;
 }
@@ -18,6 +19,7 @@
 .navbar-light .navbar-brand {
     color:#FF3838 !important;
 }
+/* Estilos Navbar end */
 
 .banner {
 position: absolute;
@@ -40,6 +42,18 @@ left: 6%;
 top: 84px;
 }
 
+.buscador {
+position: relative;
+top: 181px;
+left: auto;
+right: auto;
+
+}
+
+.titulos-margen {
+    margin-left: 3% !important;
+}
+
 .sin-borde {
     border-left: none;
     border-top-right-radius: 0.5rem !important;
@@ -59,13 +73,6 @@ top: 84px;
     background-color: #F5F5F5 !important;
 }
 
-.buscador {
-position: relative;
-top: 181px;
-left: auto;
-right: auto;
-
-}
 
 .show > .nav-link,
 .nav-link.active {
@@ -88,11 +95,6 @@ color: #FFFFFF;
    
 }
 
-#imgProducto, #imgBanner2 , #imgProductoDos {
-    text-align: center;
-}
-
-
 .btn-img {
     position: absolute;
 
@@ -111,43 +113,13 @@ color: #FFFFFF;
   
 }
 
-#footer{
-    background-color: #424242;
-    width: 100%;
-    height: 140px;
-    position: unset;
-    bottom: 0px;
-  
-}
-
-.logo-footer {
-   
-    color: #FFFFFF; 
-    font-size: 28px;
-    font-style: normal;
-    line-height: 40px;
-    text-align: center;
-    padding-top: 25px;
-    
-   
-}
-
-#hr {
-    height: 2px;
-    color: #ffffff;
-    width: 70%;
-    opacity: 0.5;
+#imgBanner2 {
     margin-left: auto;
     margin-right: auto;
-
 }
 
-#iconosRedes {
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
 
-}
+/* Estilos Card start */
 
 .imagenes-formato {
     border-radius: 1rem;
@@ -155,7 +127,7 @@ color: #FFFFFF;
 
 #contenido {
     padding-bottom: 200px;
-  
+    
 }
 
 #btnFavorito {
@@ -201,8 +173,9 @@ color: #FFFFFF;
     
 
 }
+/* Estilos Card end */
 
-/*estilos de scroll doble*/
+/*Estilos de scroll doble start*/
 
 
 .sc {
@@ -255,3 +228,45 @@ color: #FFFFFF;
     height: 250px;
     margin: 10% auto;
 }
+/*Estilos de scroll doble end*/
+
+/* Estilo footer start */
+#footer{
+    background-color: #424242;
+    width: 100%;
+    height: 140px;
+    position: unset;
+    bottom: 0px;
+  
+}
+
+.logo-footer {
+   
+    color: #FFFFFF; 
+    font-size: 28px;
+    font-style: normal;
+    line-height: 40px;
+    text-align: center;
+    padding-top: 25px;
+    
+   
+}
+
+#hr {
+    height: 2px;
+    color: #ffffff;
+    width: 70%;
+    opacity: 0.5;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#iconosRedes {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Estilo footer end */
