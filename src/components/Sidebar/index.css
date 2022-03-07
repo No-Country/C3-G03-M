@@ -1,0 +1,40 @@
+.nav-menu {
+  position: fixed;
+  top: 0;
+  left: -200%;
+  background-color: #686868;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-width: 320px;
+  transition: 900ms ease-in;
+  height: 100vh;
+  z-index: 9;
+  padding-left: 35px;
+  padding-right: 30px;
+}
+
+.nav-menu.active {
+  left: 0px;
+  transition: 850ms ease-out;
+}
+
+.nav-menu .wrapper-clothes {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.nav-menu .more-info {
+  padding-top: 40px;
+  border-top: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.nav-menu .more-info>a {
+  font-size: 20px;
+  color: #000;
+}
