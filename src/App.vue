@@ -82,7 +82,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-              <router-link to="/singup">  <button class="btn btn-outline-danger btn-sm my-3" type="submit">SingUp</button> </router-link>
+              <router-link to="/singup">  <button class="btn btn-outline-danger btn-sm my-3" type="submit">SignUp</button> </router-link>
               </a>
             </li>
           </ul>
