@@ -91,4 +91,45 @@ export default {
     height:50px;
     width:50px;
 }
+/* Estilo footer start */
+#footer{
+    background-color: #424242;
+    width: 100%;
+    height: 140px;
+    position: unset;
+    bottom: 0px;
+   
+  
+}
+
+.logo-footer {
+   
+    color: #FFFFFF; 
+    font-size: 28px;
+    font-style: normal;
+    line-height: 40px;
+    text-align: center;
+    padding-top: 25px;
+    
+   
+}
+
+#hr {
+    height: 2px;
+    color: #ffffff;
+    width: 70%;
+    opacity: 0.5;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#iconosRedes {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Estilo footer end */
 </style>

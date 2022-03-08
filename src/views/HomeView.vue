@@ -1,6 +1,6 @@
 <template>
   <!-- ###### Contenedor principal start #####-->
-    <div class="container-fluid">
+   
     <!-- ###### Segunco titulo start #####-->
     <div class="row" id="tituloSegundo">
       <div class="col my-3 titulos-margen">
@@ -334,7 +334,7 @@
     </div>
   </div>
   <!-- ###### Contenedor principal end #####-->
-    </div>
+
 </template>
 
 <script>
@@ -349,7 +349,13 @@ export default {
 };
 </script>
  <style>
- .banner {
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.banner {
 position: absolute;
 height: 202px;
 width: 100%;
@@ -420,6 +426,7 @@ color: #FFFFFF;
 #imgProducto  div{
     padding-bottom: 10px;
     width: auto;
+    margin-top: 16px;
    
 }
 
@@ -557,4 +564,45 @@ color: #FFFFFF;
     margin: 10% auto;
 }
 /*Estilos de scroll doble end*/
+/* Estilo footer start */
+#footer{
+    background-color: #424242;
+    width: 100%;
+    height: 140px;
+    position: unset;
+    bottom: 0px;
+
+  
+}
+
+.logo-footer {
+   
+    color: #FFFFFF; 
+    font-size: 28px;
+    font-style: normal;
+    line-height: 40px;
+    text-align: center;
+    padding-top: 25px;
+    
+   
+}
+
+#hr {
+    height: 2px;
+    color: #ffffff;
+    width: 70%;
+    opacity: 0.5;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#iconosRedes {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Estilo footer end */
 </style>
