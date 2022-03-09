@@ -1,6 +1,6 @@
 <template>
   <!-- ###### Contenedor principal start #####-->
-    <div class="container-fluid">
+   
     <!-- ###### Segunco titulo start #####-->
     <div class="row" id="tituloSegundo">
       <div class="col my-3 titulos-margen">
@@ -334,7 +334,7 @@
     </div>
   </div>
   <!-- ###### Contenedor principal end #####-->
-    </div>
+
 </template>
 
 <script>
@@ -349,7 +349,13 @@ export default {
 };
 </script>
  <style>
- .banner {
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.banner {
 position: absolute;
 height: 202px;
 width: 100%;
@@ -420,6 +426,7 @@ color: #FFFFFF;
 #imgProducto  div{
     padding-bottom: 10px;
     width: auto;
+    margin-top: 16px;
    
 }
 

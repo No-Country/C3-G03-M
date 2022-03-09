@@ -1,9 +1,84 @@
+<template>
+
+     <!-- ###### Contenedor principal start #####-->
+   
+      <div class="container-fluid card" id="contenido">
+        <div class="row ">
+            <div class="container-fluid col-lg-10 col-md-10 col-sm-8">
+              <div class="card-body">
+                <h5 class="card-title mt-4">¡Hola! Gracias por registrarte</h5>
+    
+                <form class="row g-3">
+                  <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                    <label for="validationDefault01" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="validationDefault01"  placeholder="Name" required>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <label for="validationDefault02" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" required>
+                  </div>
+    
+                  <div class="col-lg-12 col-md-12 col-sm-12 ">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+                        required>
+                    </div>
+    
+                    <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
+                      <label for="exampleFormControlTextarea1" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                    </div>
+    
+                    <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                        <label class="form-check-label" for="invalidCheck2">
+                          Acepto terminos y condiciones
+                        </label>
+                      </div>
+                    </div>
+                    <div class="text-center my-3">
+                      <button class="btn btn-outline-danger btn-lg text-center mt-3" type="submit">Comenzar</button>
+                      <!-- <a href="#" class="btn btn-outline-danger btn-lg text-center mt-3" id="btn-comenzar">Comenzar</a> -->
+                    </div>
+    
+                </form>
+    
+              </div>
+                <div class="text-center my-2 mb-4">
+                   <router-link to="/login" class="btn link-danger" >Ya tengo cuenta</router-link>
+                   
+                </div>
+
+            </div>
+          </div>
+  
+    </div>
+  
+      <!-- ###### Contenedor principal end #####-->
+
+</template>
+
+<script>
+export default {
+  name: 'SignUp',
+  components: {
+    
+  }
+}
+</script>
+
+<style>
+
+
+/* styles.css */
+
 /* Estilos Navbar start */
 body {
     width: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
 }
 
 .sin-guion a {
@@ -17,10 +92,6 @@ body {
 #logo, #btn-navbar {
     margin-left: auto;
     margin-right: auto;
-}
-
-.navbar {
-    border: 1px solid #FB9393;
 }
 
 .navbar-collapse {
@@ -130,45 +201,8 @@ color: #FFFFFF;
     margin-right: auto;
 }
 
-/* Btn radius start*/
-
-.form-check-input:checked[type=radio]{
-    background-color:#C376FF;
-}
-
-.form-check-input:checked {
-   border-color:#C376FF !important;
-}
-/* Btn radius end*/
-
-#cuotas {
-    color: #C376FF;
-}
-
-/* Contenedos detalle compra start */
-#detalle-compra {
-    width: 550px;
-    height: 795px ;
-    background-color:#e9ecef;
-    border: 1px solid #FB9393;
-
-}
-
-.detalle-texto p{
-    margin-bottom: 2px;
-}
-
-.form-select {
-    background-color:#e9ecef !important; 
-}
-
-option:hover {
-    background-color: #C376FF !important;
-}
 
 
-
-/* Contenedos detalle compra end */
 /* Estilos Card start */
 
 .imagenes-formato {
@@ -176,11 +210,13 @@ option:hover {
 }
 
 #contenido {
-    width: 300px;
+    
+    width: 400px;
+    height:635px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%,-42%);
+    transform: translate(-50%,-25%);
     -webkit-box-shadow: 9px 5px 18px -10px rgba(0,0,0,0.85);
     -moz-box-shadow: 9px 5px 18px -10px rgba(0,0,0,0.85); 
 }
@@ -203,6 +239,7 @@ option:hover {
 
 .card {
     background-color: none !important;
+    margin-bottom:100px;
 }
 
 #cardImg1 , #cardImg2, #cardImg3, #cardImg4, #cardImg5 {
@@ -284,3 +321,6 @@ option:hover {
     margin: 10% auto;
 }
 /*Estilos de scroll doble end*/
+
+
+</style>
