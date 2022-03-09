@@ -1,5 +1,5 @@
 <template>
-     
+  <div class="login">
     <!-- ###### Contenedor principal start #####-->
     <div class="container rounded" id="contenido">
         <div class="card row ">
@@ -27,8 +27,8 @@
 
             </div>
           </div>
-  
-    </div>
+        </div>
+      </div>
       <!-- ###### Contenedor principal end #####-->
 
 </template>
@@ -39,5 +39,7 @@
  </script>
 
  <style>
- 
+  .login{
+    height:750px;
+  }
  </style>

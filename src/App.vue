@@ -681,7 +681,7 @@ color: #FFFFFF;
     background-color: #424242;
     width: 100%;
     height: 170px;
-    position: unset;
+    position:static;
     bottom: 0px;
     margin-top: 0px;
 }
