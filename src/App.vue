@@ -1,7 +1,7 @@
 <template>
   <!-- ###### Navbar start #####-->
   <nav class="navbar navbar-expand-lg navbar-light bg-navbar">
-    <div class="container-fluid cont-nav">
+    <div class="container-fluid cont-nav my-2">
       <div id="logo">
         <a class="navbar-brand mx-4" href="#">LOGO</a>
       </div>
@@ -20,27 +20,37 @@
         <ul class="navbar-nav">
           <li class="nav-item sin-guion">
             <router-link to="/content">
-              <a class="nav-link active mx-3 my-3 " aria-current="page">Prendas</a></router-link>
+              <a class="nav-link active mx-3 my-3" aria-current="page"
+                >Prendas</a
+              ></router-link
+            >
           </li>
           <li class="nav-item sin-guion">
             <router-link to="">
-              <a class="nav-link mx-3 my-3" href="#">Ofertas</a></router-link>
+              <a class="nav-link mx-3 my-3" href="#">Ofertas</a></router-link
+            >
           </li>
           <li class="nav-item sin-guion">
             <router-link to="">
-              <a id="linknav" class="nav-link mx-3 my-3">Historial</a></router-link>
+              <a id="linknav" class="nav-link mx-3 my-3"
+                >Historial</a
+              ></router-link
+            >
           </li>
           <li class="nav-item sin-guion">
             <router-link to="">
-              <a class="nav-link mx-3 my-3" href="#">Moda</a></router-link>
+              <a class="nav-link mx-3 my-3" href="#">Moda</a></router-link
+            >
           </li>
           <li class="nav-item sin-guion">
             <router-link to="">
-              <a class="nav-link mx-3 my-3" href="#">Vender</a></router-link>
+              <a class="nav-link mx-3 my-3" href="#">Vender</a></router-link
+            >
           </li>
           <li class="nav-item sin-guion">
             <router-link to="">
-              <a class="nav-link mx-3 my-3" href="#">Ayuda</a></router-link>
+              <a class="nav-link mx-3 my-3" href="#">Ayuda</a></router-link
+            >
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="#">
@@ -124,7 +134,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <router-link to="/singup">
+                <router-link to="/signup">
                   <button
                     class="btn btn-outline-danger btn-sm my-3"
                     type="submit"
@@ -141,48 +151,59 @@
     </div>
   </nav>
   <!-- ###### Navbar end #####-->
-   <section>
 
-    <!-- ###### Banner uno start #####-->
-    <div class="container-fluid banner ">
+  <!-- ###### Banner uno start #####-->
+  <section>
+    <div class="container-fluid banner">
       <div class="row">
         <div class="col">
           <h1 class="titulo">Encuentra tu <strong>estilo</strong></h1>
-
         </div>
       </div>
 
       <div class="input-group container buscador">
-        <input type="text" class="form-control borde-redondeado" placeholder="Busqueda" aria-label="Username"
-          aria-describedby="basic-addon1">
+        <input
+          type="text"
+          class="form-control borde-redondeado"
+          placeholder="Busqueda"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+        />
         <span class="input-group-text sin-borde" id="basic-addon1">
           <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="#686868"
-              class="bi bi-search" viewBox="0 0 16 16">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              color="#686868"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
               <path
-                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
             </svg>
           </a>
         </span>
       </div>
     </div>
     <!-- ###### Banner uno end #####-->
-
   </section>
 
   <!-- ###### content #####-->
-
- <div class="container">
-  
-          <router-view> </router-view>
+  <div class="container">
+    <router-view> </router-view>
   </div>
-
   <!-- ###### content #####-->
 
   <!-- ###### Footer start #####-->
-  <footer id="footer">
+  <footer
+    id="footer"
+    :class="isAbsoluteView ? 'footer-absolute' : 'footer-relative'"
+  >
     <div class="">
-      <h6 class="logo-footer">LOGO</h6>
+      <h6 class="logo-footer me-4">LOGO</h6>
       <hr id="hr" />
       <div class="row" id="iconosRedes">
         <div class="col-lg-10 col-md-10 col-sm-10 sin-guion">
@@ -241,6 +262,11 @@
 // @ is an alias to /src
 export default {
   name: "App",
+  computed: {
+    isAbsoluteView() {
+      return this.$route.name === "login" || this.$route.name === "signup" || this.$route.name === "content"
+    },
+  },
 };
 </script>
 
@@ -471,16 +497,24 @@ export default {
 #footer {
   background-color: #424242;
   width: 100%;
-  height: 140px;
-  position: unset;
+  height: 100px;
+}
+
+.footer-relative {
+  position: relative;
+  margin: 0 auto;
+}
+
+.footer-absolute {
+  position: absolute;
   bottom: 0px;
 }
 
 .logo-footer {
   color: #ffffff;
-  font-size: 28px;
+  font-size: 26px;
   font-style: normal;
-  line-height: 40px;
+  line-height: 10px;
   text-align: center;
   padding-top: 25px;
 }
