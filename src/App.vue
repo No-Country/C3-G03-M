@@ -1,0 +1,723 @@
+<template>
+ <body>
+  <!-- ###### Navbar start #####-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-navbar">
+    <div class="container-fluid cont-nav">
+      <div id="logo">
+        <a class="navbar-brand mx-4" href="#">LOGO</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" color="#686868"></span>
+      </button>
+      <div class="collapse navbar-collapse cont-link" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link to="/content"> <a class="nav-link active mx-3 my-3" aria-current="page" >Prendas</a></router-link>
+          </li>
+          <li class="nav-item">
+           <router-link to=""> <a class="nav-link mx-3 my-3" href="#">Ofertas</a></router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to=""> <a id="linknav" class="nav-link mx-3 my-3" >Historial</a></router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to=""> <a class="nav-link mx-3 my-3" href="#">Moda</a></router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to=""> <a class="nav-link mx-3 my-3" href="#">Vender</a></router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to=""> <a class="nav-link mx-3 my-3" href="#">Ayuda</a></router-link>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">
+              <button class="btn btn-outline-danger btn-sm my-3 " type="submit">Login</button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+            <button class="btn btn-outline-danger btn-sm my-3  " type="submit">Sing up</button>
+            </a>
+          </li>
+          <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> -->
+        </ul>
+
+        <!-- ###### Iconos start #####-->
+        <div class="sin-guion mx-4 my-4 d-flex">
+          <a class="" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="#686868"
+              class="bi bi-heart" viewBox="0 0 16 16">
+              <path
+                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+            </svg>
+          </a>
+          <a class="mx-3" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="#686868"
+              class="bi bi-bell" viewBox="0 0 16 16">
+              <path
+                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+            </svg>
+          </a>
+          <a class="" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="#686868"
+              class="bi bi-cart" viewBox="0 0 16 16">
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+          </a>
+        </div>
+        <!-- ###### Iconos end #####-->
+
+        <!-- ###### Btn navbar start #####-->
+        <div id="btn-navbar">
+          <ul class="navbar-nav d-flex">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+             <router-link to="/login">   <button class="btn btn-outline-danger btn-sm my-3" type="submit">Login</button></router-link>
+               
+            </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+              <router-link to="/singup">  <button class="btn btn-outline-danger btn-sm my-3" type="submit">SingUp</button> </router-link>
+              </a>
+            </li>
+          </ul>
+        </div>
+       <!-- ###### Btn navbar start #####-->
+      </div>
+    </div>
+  </nav>
+  <!-- ###### Navbar end #####-->
+
+
+ <!-- ###### content #####-->
+
+ 
+ <div>
+   <center>
+      <router-view>
+      </router-view>
+   </center>
+ </div>
+ 
+
+<!-- ###### content #####-->
+
+
+
+    <!-- ###### Footer start #####-->
+    <footer id="footer" class="footer">
+      <div class="">
+        <h6 class="logo-footer">LOGO</h6>
+        <hr id="hr">
+        <div class="row" id="iconosRedes">
+          <div class="col-lg-10 col-md-10 col-sm-10 sin-guion">
+            <a class="" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="#FFFFFF"
+                class="bi bi-instagram" viewBox="0 0 16 16">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+              </svg>
+            </a>
+            <a class="mx-3" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="#FFFFFF"
+                class="bi bi-facebook" viewBox="0 0 16 16">
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+              </svg>
+            </a>
+            <a class="" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="#FFFFFF"
+                class="bi bi-twitter" viewBox="0 0 16 16">
+                <path
+                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ###### Footer start #####-->
+</body>
+</template>
+<script>
+// @ is an alias to /src
+export default {
+  name: "App"
+  
+}
+</script>
+
+<style>
+/*normalize*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+
+
+
+
+
+/* styles.css */
+
+/* Estilos Navbar start */
+
+*{
+    /*border: 1px solid;*/
+}
+
+.sin-guion a {
+    text-decoration:none;
+}
+
+.bg-navbar {
+    background-color: #ffffff;
+    box-shadow: 8px 10px 20px -10px rgb(189, 186, 186);
+}
+
+#logo, #btn-navbar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-collapse {
+    flex-grow:0.5 !important;
+    background-color: #ffffff;
+}
+
+.navbar-light .navbar-brand {
+    color:#6b6767 !important;
+}
+/* Estilos Navbar end */
+
+.banner {
+position: absolute;
+height: 202px;
+width: 100%;
+left: 0px;
+top: 76px;
+background-image: url("https://source.unsplash.com/random/1440x202?sig=1" );
+}
+
+.titulo{
+font-family: Rubik;
+font-style: normal;
+font-size: 30px;
+line-height: 36px;
+color: #ffffff; 
+position: absolute;
+height: 46px;
+left: 6%;
+top: 84px;
+}
+
+.buscador {
+position: relative;
+top: 181px;
+left: auto;
+right: auto;
+
+}
+
+.titulos-margen {
+    margin-left: 3% !important;
+}
+
+.sin-borde {
+    border-left: none;
+    border-top-right-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+    background-color: #F5F5F5 !important;
+
+}
+
+.sin-borde img {
+    border-radius: 1rem;
+}
+
+.borde-redondeado{
+    border-top-left-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+    border-right: none !important;
+    background-color: #F5F5F5 !important;
+}
+
+
+.show > .nav-link,
+.nav-link.active {
+color: #FFFFFF;
+}
+
+.cont-nav {
+    z-index: 1000;
+    background-color: #FFFFFF;
+}
+
+#tituloSegundo{
+    position: relative;
+    margin-top: 240px;
+}
+
+#imgProducto  div{
+    padding-bottom: 10px;
+    width: auto;
+   
+}
+
+.btn-img {
+    position: absolute;
+
+}
+
+.card-img  {
+    border-radius: 1.5rem !important;
+    
+
+}
+
+#imgProductoDos div{
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+#imgBanner2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Estilos Card start */
+
+.imagenes-formato {
+    border-radius: 1rem;
+}
+
+#contenido {
+    padding-bottom: 200px;
+    
+}
+
+#btnFavorito {
+    border-radius: 2.5rem;
+    border: 0;
+    opacity: 1.2;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-anchor: none;
+    padding: 10px;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.582);
+    cursor: pointer;
+    width: 40px;
+    /* left: 45%;
+  */
+}
+
+.card {
+    background-color: none !important;
+}
+
+#cardImg1 , #cardImg2, #cardImg3, #cardImg4, #cardImg5 {
+    border: none;
+    background-color: #fff0;
+ 
+  
+}
+
+#cardImg4, #cardImg5 {
+    width: 550px;
+    height: 350px;
+}
+
+.zoom:hover .card-img {
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+    transition-duration: 3s;
+}
+
+.zoom {
+    overflow:hidden;
+    
+
+}
+/* Estilos Card end */
+
+/*Estilos de scroll doble start*/
+
+
+.sc {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 800px;
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 8px;
+    height: 0px;
+   
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #ff3838d8;
+    border-radius: 5px;
+    border-left: 1px solid #868686;
+}
+
+#scroll-2::-webkit-scrollbar{
+    width: 8px;
+    height: 0px;
+}
+
+.scroll::-moz-srollbar {
+    width: 8px;
+    height: 0px;
+}
+
+.scroll::-moz-srollbar-thumb {
+    background: #FF3838;
+    border-radius: 5px;
+}
+
+.scroll {
+    width: 80%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* background-color: #fcfcfc; */
+    background-color: #424242;
+    margin: 10%;
+}
+
+.item {
+    width: 80%;
+    height: 250px;
+    margin: 10% auto;
+}
+/*Estilos de scroll doble end*/
+
+/* Estilo footer start */
+#footer{
+    background-color: #424242;
+    width: 100%;
+    height: 170px;
+    position: unset;
+    bottom: 0px;
+    margin-top: 0px;
+}
+
+
+.logo-footer {
+   
+    color: #FFFFFF; 
+    font-size: 28px;
+    font-style: normal;
+    line-height: 40px;
+    text-align: center;
+    padding-top: 25px;
+    
+   
+}
+
+#hr {
+    height: 2px;
+    color: #ffffff;
+    width: 70%;
+    opacity: 0.5;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#iconosRedes {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* Estilo footer end */
+
+
+</style>
