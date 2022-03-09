@@ -48,7 +48,8 @@
     
               </div>
                 <div class="text-center my-2 mb-4">
-                    <a href="#" class="btn link-danger">Ya tengo cuenta</a>
+                   <router-link to="/login" class="btn link-danger" >Ya tengo cuenta</router-link>
+                   
                 </div>
 
             </div>

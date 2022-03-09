@@ -24,18 +24,19 @@ const routes = [
     path: "/signup",
     name: "signup",
     component: SignUp,
-    props: { absoluteView: true },
+
   },
   {
     path: "/login",
     name: "login",
     component: Login,
-    props: { absoluteView: true },
+   
   },
   {
     path: "/content",
     name: "content",
     component: Content,
+    
   },
 ];
 

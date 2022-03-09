@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="text-center my-2 mb-4">
-          <a href="#" class="btn link-danger">Crear cuenta</a>
+           <router-link to="/signup" class="btn link-danger" >Crear cuenta</router-link>
         </div>
       </div>
     </div>

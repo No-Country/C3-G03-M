@@ -7,7 +7,7 @@
         :key="prenda.id"
         :value="Prendas.id" id="loop"
       >
-        <div class="col-lg-4 card rounded item" id="cardImg1">
+        <div class="col-lg-4 col-md-4 col-sm-4 card rounded item" id="cardImg1">
           <img
             class="img-fluid imagenes-formato img-centrada card-img img-tamanio"
             id="img-1"
@@ -32,9 +32,9 @@
             </button>
           </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-8 col-md-8 col-sm-8">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-md-12 col-sm-10">
               <h4 class="text-capitalize">{{ prenda.descripcion }}</h4>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -45,7 +45,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col-lg-10 col-md-10 col-sm-10">
               <h5>$ {{ prenda.precio }}</h5>
             </div>
           </div>

@@ -3,7 +3,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-navbar">
     <div class="container-fluid cont-nav my-2">
       <div id="logo">
-        <a class="navbar-brand mx-4" href="#">LOGO</a>
+        <a class="navbar-brand mx-4" href="#"   @click="collapseNavBar">LOGO</a>
       </div>
       <button
         class="navbar-toggler"
@@ -16,56 +16,51 @@
       >
         <span class="navbar-toggler-icon" color="#686868"></span>
       </button>
-      <div class="collapse navbar-collapse cont-link" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item sin-guion">
-            <router-link to="/content">
-              <a class="nav-link active mx-3 my-3" aria-current="page"
-                >Prendas</a
-              ></router-link
-            >
-          </li>
-          <li class="nav-item sin-guion">
-            <router-link to="">
-              <a class="nav-link mx-3 my-3" href="#">Ofertas</a></router-link
-            >
-          </li>
-          <li class="nav-item sin-guion">
-            <router-link to="">
-              <a id="linknav" class="nav-link mx-3 my-3"
-                >Historial</a
-              ></router-link
-            >
-          </li>
-          <li class="nav-item sin-guion">
-            <router-link to="">
-              <a class="nav-link mx-3 my-3" href="#">Moda</a></router-link
-            >
-          </li>
-          <li class="nav-item sin-guion">
-            <router-link to="">
-              <a class="nav-link mx-3 my-3" href="#">Vender</a></router-link
-            >
-          </li>
-          <li class="nav-item sin-guion">
-            <router-link to="">
-              <a class="nav-link mx-3 my-3" href="#">Ayuda</a></router-link
-            >
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">
-              <button class="btn btn-outline-danger btn-sm my-3 " type="submit">Login</button>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-            <button class="btn btn-outline-danger btn-sm my-3  " type="submit">Sing up</button>
-            </a>
-          </li>
-          <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li> -->
-        </ul>
+
+      <div
+        class="collapse navbar-collapse cont-link"
+        id="navbarNav" ref="navbarRef"
+      >
+        <!-- replacing the ul with a div tag -->
+        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">   -->
+        <div class="navbar-nav">
+          <!-- on each of the li tag , there is a class named *nav item*, copy it and place it on the a tag & delete the li -->
+          <!-- <a class=" nav-item nav-link active" aria-current="page" href="#">Home</a> -->
+          <!-- replace the a tag with the router link -->
+          <router-link
+            to="/content"
+            @click="collapseNavBar"
+
+            class="nav-item nav-link sin-guion active mx-3 my-3"
+          >
+            Prendas
+          </router-link>
+          <router-link to="/login" 
+           @click="collapseNavBar"
+          class="nav-link sin-guion active mx-3 my-3"
+            >Ofertas</router-link
+          >
+          <router-link to="/signup"
+           @click="collapseNavBar"
+           class="nav-link sin-guion active mx-3 my-3"
+            >Historial</router-link
+          >
+          <router-link to="/content" 
+           @click="collapseNavBar"
+          class="nav-link sin-guion active mx-3 my-3"
+            >Moda</router-link
+          >
+          <router-link to="/signup"
+           @click="collapseNavBar"
+           class="nav-link sin-guion active mx-3 my-3"
+            >Vender</router-link
+          >
+          <router-link to="/" 
+           @click="collapseNavBar"
+          class="nav-link sin-guion active mx-3 my-3"
+            >Ayuda</router-link
+          >
+        </div>
 
         <!-- ###### Iconos start #####-->
         <div class="sin-guion mx-4 my-4 d-flex">
@@ -123,7 +118,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <router-link to="/login">
-                  <button
+                  <button    @click="collapseNavBar"
                     class="btn btn-outline-danger btn-sm my-3"
                     type="submit"
                   >
@@ -135,7 +130,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <router-link to="/signup">
-                  <button
+                  <button    @click="collapseNavBar"
                     class="btn btn-outline-danger btn-sm my-3"
                     type="submit"
                   >
@@ -150,6 +145,7 @@
       </div>
     </div>
   </nav>
+
   <!-- ###### Navbar end #####-->
 
   <!-- ###### Banner uno start #####-->
@@ -207,7 +203,7 @@
       <hr id="hr" />
       <div class="row" id="iconosRedes">
         <div class="col-lg-10 col-md-10 col-sm-10 sin-guion">
-          <a class="" href="#">
+          <a class="" href="https://www.instagram.com/?hl=es-la"  target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -222,7 +218,7 @@
               />
             </svg>
           </a>
-          <a class="mx-3" href="#">
+          <a class="mx-3" href="https://es-la.facebook.com/"  target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -237,7 +233,7 @@
               />
             </svg>
           </a>
-          <a class="" href="#">
+          <a class="" href="https://twitter.com/?lang=es"  target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -264,9 +260,23 @@ export default {
   name: "App",
   computed: {
     isAbsoluteView() {
-      return this.$route.name === "login" || this.$route.name === "signup" || this.$route.name === "content"
+      return (
+        this.$route.name === "login" ||
+        this.$route.name === "signup" ||
+        this.$route.name === "content"
+      );
     },
   },
+  methods: {
+    collapseNavBar() {
+    let elem = this.$refs.navbarRef;
+    //   new bootstrap.Collapse(elem, {
+    //     toggle: true
+    // })
+    elem.classList.remove('show')
+  
+    }
+  }
 };
 </script>
 
