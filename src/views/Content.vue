@@ -1,59 +1,79 @@
 <template>
-<div class="containerAlquile">
-    <div class="container lista-alquiler" id="cont-principal">
-      <div
-        class="row"
-        v-for="prenda in Prendas"
-        :key="prenda.id"
-        :value="Prendas.id" id="loop"
-      >
-        <div class="col-lg-4 col-md-4 col-sm-4 card rounded item" id="cardImg1">
-          <img
-            class="img-fluid imagenes-formato img-centrada card-img img-tamanio"
-            id="img-1"
-            :src="prenda.img"
-            alt=""
-          />
-          <div class="card-img-overlay text-start mx-2" id="contenedorFavorito">
-            <button class="btn-img btn card-title" id="btnFavorito">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                color="#FF3838"
-                class="bi bi-heart"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="col-lg-8 col-md-8 col-sm-8">
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-10">
-              <h4 class="text-capitalize">{{ prenda.descripcion }}</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus culpa impedit earum labore consequuntur assumenda
-                porro quod nostrum, voluptatem illum praesentium repellendus
-                reprehenderit ipsam, nemo alias saepe sed dolores! Fugit.
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-10 col-md-10 col-sm-10">
-              <h5>$ {{ prenda.precio }}</h5>
-            </div>
-          </div>
-        </div>
+    <div class="row" id="tituloSegundo">
+      <div class="col my-3 titulos-margen">
+        <h4>Prendas para ti</h4>
       </div>
     </div>
 
-</div>
+
+
+  <div class="row" id="card-compra">
+    <div
+      class="col-lg-4 col-md-6 col-sm-10 card rounded zoom"
+      id="cardImg1"
+      v-for="prenda in Prendas"
+      :key="prenda.id"
+      :value="Prendas.id"
+    >
+      <img
+        class="img-fluid img-centrada card-img-top"
+        id="img-1"
+        placeholder="img"
+        :src="prenda.img"
+      />
+      <div class="card-img-overlay mx-2" id="contenedorFavorito">
+        <button class="btn-img btn card-title" id="btnFavorito">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            color="#FF3838"
+            class="bi bi-heart"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="card-body mx-4">
+        <div class="card-title">
+          <h3 class="text-capitalize">{{ prenda.descripcion }}</h3>
+        </div>
+
+        <div class="card-text">
+          <h1>$ {{ prenda.precio }}</h1>
+        </div>
+        <button class="btn btn-danger" type="submit" id="compra">
+          Comprar
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- <div
+        class="col-lg-4 col-md-4 col-sm-4 card mx-4"
+        v-for="prenda in Prendas"
+        :key="prenda.id"
+        :value="Prendas.id"
+      >
+        <img class="img card-img my-4" placeholder="img" :src="prenda.img" />
+        <div class="card-body mx-4">
+          <div class="card-title">
+            <h3 class="text-capitalize">{{ prenda.descripcion }}</h3>
+          </div>
+
+          <div class="card-text">
+            <h1>$ {{ prenda.precio }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>-->
 </template>
 
 <script>
@@ -83,14 +103,13 @@ export default {
 };
 </script>
 <style>
-.lista-alquiler {
-  width: 900px;
-  height: 750px;
+/* .lista-alquiler {
+  width: 100%;
+  height: 740px;
   overflow: scroll;
   margin-top: 50px;
-  border-radius: 10px;
-  box-shadow: 8px 10px 20px -10px rgb(189, 186, 186);
-}
+  background-color: rgb(245, 241, 241);
+} */
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -102,32 +121,49 @@ export default {
   border-radius: 10px;
 }
 
-.lista-alquiler-h4 {
-  height: 100px;
-  width: 850px;
+/* .lista-alquiler-h1 {
+  display: inline-block;
+  overflow: hidden;
+  height: 400px;
+  width: 400px;
+  border: 1px solid rgb(235, 235, 245);
+  margin-left: 15px;
+  margin-top: 15px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 8px 10px 20px -10px rgb(189, 186, 186);
+} */
+
+.card:hover {
+  background-color: rgb(98, 139, 129);
+  box-shadow: 8px 10px 20px -10px rgb(134, 133, 133);
+}
+
+img {
+  max-height: 350px;
+}
+.btn {
+  color: #fff;
+  border-color: #dc3545;
+  z-index: 8;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.card-img-overlay {
+  height: 200px;
+}
+
+#card-compra {
+  transform: translate(-50%, -25%);
+}
+/* .pedidos {
+  border: 1px solid rgb(255, 252, 252);
   border-radius: 10px;
-  border: 1px solid rgb(228, 234, 253);
-}
-
-.lista-alquiler-h4:hover {
-  background-color: rgb(117, 243, 201);
-}
-
-.containerAlquiler:hover {
-  background-color: rgb(252, 191, 244);
-}
-
-.img-tamanio {
-  height: 160px !important;
-  width: 160px !important;
-}
-
-#cont-principal {
-    transform: translate(0%,30%);
-
-}
-
-#loop{
-    height: 36% !important;
-}
+  background-color: rgb(245, 241, 241);
+} */
 </style>

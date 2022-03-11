@@ -262,8 +262,8 @@ export default {
     isAbsoluteView() {
       return (
         this.$route.name === "login" ||
-        this.$route.name === "signup" ||
-        this.$route.name === "content"
+        this.$route.name === "signup"
+     
       );
     },
   },

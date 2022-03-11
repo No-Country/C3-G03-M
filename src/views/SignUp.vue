@@ -216,7 +216,7 @@ color: #FFFFFF;
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-25%);
+    transform: translate(-50%,-35%);
     -webkit-box-shadow: 9px 5px 18px -10px rgba(0,0,0,0.85);
     -moz-box-shadow: 9px 5px 18px -10px rgba(0,0,0,0.85); 
 }
